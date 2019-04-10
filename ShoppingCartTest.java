@@ -33,4 +33,15 @@ public class ShoppingCartTest {
         assertEquals(2.5, testCart.getBalance(), 0);
     }
 
+    //Test5
+    //This test is to check that the cart is correctly updated once an item is removed
+    @Test
+    public void testRemove() throws Exception {
+        testCart.addItem(soda);
+        testCart.addItem(pepsi);
+        testCart.removeItem(soda);
+        assertEquals(1, testCart.getItemCount());
+
+    }
+
 }
