@@ -23,6 +23,17 @@ public class ShoppingCartTest {
         assertEquals(0, testCart.getItemCount());
     }
 
+    //Test 3
+    //Tests to see if the number of items increments when a new product is added.
+    //This is done by adding an item to the cart, and checking that the return value from getItemCount has increased by one.
+    @Test
+    public void testItemIncrease() throws Exception {
+        testCart.addItem(soda);
+        assertEquals(1, testCart.getItemCount());
+        testCart.addItem(banana);
+        assertEquals(2, testCart.getItemCount());
+    }
+
     //Test 4
     //Tests to see if the balance is totaled correctly.
     //This is done by adding an item to the cart (which is known to be of 0 balance)
